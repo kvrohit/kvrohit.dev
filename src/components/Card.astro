@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+  external?: boolean;
+}
+
+const { href, title, body, external = false } = Astro.props as Props;
+---
+
+<li>
+  <a
+    class="w-full p-8 border border-red-200 rounded-md bg-gradient-to-r hover:from-red-200 hover:to-indigo-200 inline-block"
+    href={href}
+    target={external ? "_blank" : "_self"}
+  >
+    <h2 class="text-xl mb-2">
+      {title}
+      <span>&rarr;</span>
+    </h2>
+    <p class="text-gray-500">
+      {body}
+    </p>
+  </a>
+</li>
