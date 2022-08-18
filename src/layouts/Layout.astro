@@ -18,6 +18,13 @@ const { title } = Astro.props as Props;
   <body class="md:container mx-auto px-8">
     <slot />
     <style>
+      @font-face {
+        font-family: "IBM Plex Mono";
+        src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2"),
+          url("/fonts/IBMPlexMono-Regular.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
       body {
         font-family: "IBM Plex Mono";
       }
