@@ -10,27 +10,37 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post;
-const { title, description, publishDate } = frontmatter;
+const { title, description, date } = frontmatter;
 ---
 
 <Layout title={title}>
   <nav>
-
-  <h1 class="text-3xl my-4">
-    <span
-      class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 font-bold"
-      >{title}
-    </span>
-  </h1>
+    <h1 class="text-3xl my-4">
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 font-bold"
+        >{title}
+      </span>
+    </h1>
     <ul>
       <li>
-        <a class="text-gray-500 hover:text-gray-800" href="/blog">&larr; back</a>
+        <a class="text-gray-500 hover:text-gray-800" href="/blog"
+          >&larr; back
+        </a>
       </li>
     </ul>
-      </nav>
+  </nav>
   <main>
-    <article class="mt-4 max-w-none prose prose-lg prose-video:w-full">
-    <Content />
-      </article>
+    <article class="my-4 max-w-none prose md:prose-lg prose-video:w-full">
+      <Content />
+      <div class="text-gray-500">
+        Published on {
+          new Date(date).toLocaleString("en-IN", {
+            year: "numeric",
+            month: "long",
+            day: "2-digit",
+          })
+        }
+      </div>
+    </article>
   </main>
 </Layout>
