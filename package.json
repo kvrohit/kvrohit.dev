@@ -9,9 +9,6 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "peerDependencies": {
-    "@tailwindcss": "^3.0.0"
-  },
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
