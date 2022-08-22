@@ -2,6 +2,7 @@
 title: "Getting started with Node.js and Express web application framework on Bluemix"
 date: 2014-09-24
 description: Getting started with Node.js and Express web application framework on Bluemix
+category: tutorial
 ---
 
 <div

@@ -2,6 +2,7 @@
 title: "How to: Create bash aliases for frequently used commands"
 date: 2012-02-11
 description: The alias command can be quite useful for creating handy shortcuts
+category: tutorial
 ---
 
 The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:

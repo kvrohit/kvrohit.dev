@@ -22,36 +22,51 @@ posts = posts.sort(
       </div>
     </div>
   </section>
-  <main class="container mx-auto px-4 lg:px-8 max-w-screen-xl">
-    {
-      posts.map((post, index) => {
-        const href = `/blog/${post.file.split("/").pop().split(".").shift()}`;
-        return (
-          <div class="my-8 flex sm:flex-row flex-col gap-2 sm:gap-4 sm:divide-x-2 border-b pb-8 sm:border-none sm:pb-0">
-            <div class="sm:flex sm:flex-col items-center justify-center sm:min-w-max">
-              <span class="sm:text-2xl sm:block text-gray-500 sm:text-gray-600">
-                {new Date(post.frontmatter.date).toLocaleString("en-US", {
-                  day: "2-digit",
-                })}
-              </span>
-              <span class="sm:font-sm sm:block text-gray-500">
-                {new Date(post.frontmatter.date).toLocaleString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                })}
-              </span>
+  <main
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div class="mb-10 border-b divide-y">
+      {
+        posts.map((post, index) => {
+          const href = `/blog/${post.file.split("/").pop().split(".").shift()}`;
+          return (
+            <div class="grid py-8 sm:grid-cols-4">
+              <div class="mb-4 sm:mb-0">
+                <div class="space-y-1 text-xs font-semibold tracking-wide uppercase">
+                  <a
+                    href="/"
+                    class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                    aria-label="Category"
+                  >
+                    {post.frontmatter.category}
+                  </a>
+                  <p class="text-gray-600">
+                    {new Date(post.frontmatter.date).toLocaleString("en-US", {
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </p>
+                </div>
+              </div>
+              <div class="sm:col-span-3">
+                <div class="mb-3">
+                  <a
+                    href={href}
+                    aria-label="Article"
+                    class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
+                  >
+                    <p class="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
+                      {post.frontmatter.title}
+                    </p>
+                  </a>
+                </div>
+                <p class="text-gray-700">{post.frontmatter.description}</p>
+              </div>
             </div>
-            <div class="sm:px-4">
-              <h2 class="text-xl md:text-2xl mb-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500">
-                <a class="hover:text-indigo-800" href={href}>
-                  {post.frontmatter.title} &rarr;
-                </a>
-              </h2>
-              <p class="text-gray-500">{post.frontmatter.description}</p>
-            </div>
-          </div>
-        );
-      })
-    }
+          );
+        })
+      }
+    </div>
   </main>
 </Layout>

@@ -2,6 +2,7 @@
 title: "How to: Create Live USB, the easy way!"
 date: 2012-06-05
 description: Ever wondered if you could create a live usb without using any third party software ?
+category: tutorial
 ---
 
 Ever wondered if you could create a live usb without using any third party software ? Read on...

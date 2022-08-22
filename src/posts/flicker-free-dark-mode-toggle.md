@@ -2,6 +2,7 @@
 title: Flicker free dark mode toggle
 date: 2020-08-11
 description: How to implement flicker free dark mode toggle.
+category: tutorial
 ---
 
 There are tons of articles on the internet about dark mode and this is not one of them. This is simply a log of how I achieved a flicker free dark mode toggle that you see on this site.
