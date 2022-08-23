@@ -5,9 +5,7 @@ description: How to implement flicker free dark mode toggle.
 category: tutorial
 ---
 
-There are tons of articles on the internet about dark mode and this is not one of them. This is simply a log of how I achieved a flicker free dark mode toggle that you see on this site.
-
-So how do you implement a dark-mode toggle? We'll need three things:
+We'll need three things:
 
 1. CSS that defines colors for "light" and "dark" modes.
 2. HTML to indicate the current color mode.
@@ -39,7 +37,7 @@ The styles are scoped to the `color` attribute which means that any element that
 
 ## 2. Markup
 
-The question now is where do we stick this attribute? Why, the `documentElement` of course. For HTML documents the `documentElement` points to the root `<html>` tag.
+The `color` attribute has to be added to the `documentElement`. For HTML documents the `documentElement` is the root `<html>` tag.
 
 ```html
 <html color="light">
@@ -56,8 +54,6 @@ The question now is where do we stick this attribute? Why, the `documentElement`
 ```
 
 Great! Now that we have tackled the markup and the styling it is time to move on to the toggle button.
-
-Our button is going to be a `<div id="dark-mode-toggle">` with an `<svg>` icon inside it, styled like a button i.e., the cursor changes to a `pointer` to indicate that this is clickable. Go ahead, try clicking the icon at the top-right corner of this page.
 
 ## 3. JavaScript
 
@@ -102,11 +98,7 @@ window.addEventListener("load", function (e) {
 });
 ```
 
-Cool. But is it flicker free? Have a go at it then, click that toggle on the top-right hand corner, visit various pages and see for yourself.
-
 ## Credits
-
-People way smarter than me have already tackled this, I am mearly inspired by them. Hope you are too.
 
 1. [https://ryanfeigenbaum.com/dark-mode/](https://ryanfeigenbaum.com/dark-mode/)
 2. [https://css-tricks.com/lets-say-you-were-going-to-write-a-blog-post-about-dark-mode/](https://css-tricks.com/lets-say-you-were-going-to-write-a-blog-post-about-dark-mode/)
