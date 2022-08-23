@@ -59,7 +59,7 @@ Great! Now that we have tackled the markup and the styling it is time to move on
 
 Now the fun bits, handling the click event and doing something:
 
-```js
+```javascript
 document
   .querySelector("#dark-mode-toggle")
   .addEventListener("click", function () {
@@ -77,7 +77,7 @@ Well, not really. How do you persist this across page loads?
 
 Since we are in `SSG` land, `localStorage` is our best option. Let's implement that (yay! more JS). Here is the complete implementation:
 
-```js
+```javascript
 if (window.localStorage.getItem("color") === "dark") {
   document.documentElement.setAttribute("color", "dark");
 } else {
