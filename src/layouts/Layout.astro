@@ -16,7 +16,7 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body class="">
-    <header class="bg-gray-900">
+    <header class="font-sans bg-gray-900">
       <div
         class="flex items-center h-16 max-w-screen-xl gap-8 px-4 mx-auto sm:px-6 lg:px-8"
       >
@@ -56,14 +56,45 @@ const { title } = Astro.props as Props;
     <slot />
     <style>
       @font-face {
-        font-family: "IBM Plex Mono";
-        src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2"),
-          url("/fonts/IBMPlexMono-Regular.woff") format("woff");
-        font-weight: normal;
+        font-family: charter;
         font-style: normal;
+        font-weight: normal;
+        font-stretch: normal;
+        src: url("/fonts/charter_regular.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: charter;
+        font-style: italic;
+        font-weight: normal;
+        font-stretch: normal;
+        src: url("/fonts/charter_italic.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: charter;
+        font-style: normal;
+        font-weight: bold;
+        font-stretch: normal;
+        src: url("/fonts/charter_bold.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: charter;
+        font-style: italic;
+        font-weight: bold;
+        font-stretch: normal;
+        src: url("/fonts/charter_bold_italic.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Fira Sans";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/FiraSans-Regular.woff2") format("woff2");
       }
       body {
-        font-family: "IBM Plex Mono";
+        font-family: "Fira Sans", sans-serif;
       }
     </style>
   </body>

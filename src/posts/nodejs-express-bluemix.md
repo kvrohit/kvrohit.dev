@@ -1,15 +1,15 @@
 ---
-title: "Getting started with Node.js and Express web application framework on Bluemix"
+title: "Node.js and Express on Bluemix"
 date: 2014-09-24
 description: Getting started with Node.js and Express web application framework on Bluemix
 category: tutorial
 ---
 
 <div
-  class="p-4 border-l-4 bg-amber-50 border-amber-700"
+  class="p-4 border-l-4 bg-amber-50 border-amber-700 not-prose"
   role="alert"
 >
-  <h3 class="text-sm font-medium p-0 m-0 text-amber-700">This article is outdated.</h3>
+  <h3 class="text-sm font-medium text-amber-700">This article is outdated.</h3>
 </div>
 
 The purpose of this article is to give you a quick introduction to web application development using node.js and the express web application framework. It will guide you though the process of creating a simple web application and outline the steps involved in deploying this application on Bluemix.

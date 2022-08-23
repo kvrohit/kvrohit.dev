@@ -19,7 +19,7 @@ const { title, description, date } = frontmatter;
       <!-- lg:h-screen lg:items-center lg:flex" -->
       <div class="max-w-3xl mx-auto text-center">
         <h1
-          class="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 py-2"
+          class="font-serif text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 py-2"
         >
           {title}
         </h1>
@@ -29,7 +29,7 @@ const { title, description, date } = frontmatter;
       </div>
     </div>
   </section>
-  <article class="my-4 mx-auto prose lg:prose-lg p-4">
+  <article class="my-4 mx-auto prose lg:prose-lg p-4 prose-headings:font-serif">
     <Content />
     <div class="text-gray-500 text-sm">
       Published on {
