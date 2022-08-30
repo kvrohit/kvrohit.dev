@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../posts/*.md");
@@ -14,21 +15,7 @@ const { title, description, date } = frontmatter;
 ---
 
 <Layout title={title}>
-  <section class="text-white bg-gray-900">
-    <div class="max-w-screen-xl px-4 py-32 mx-auto">
-      <!-- lg:h-screen lg:items-center lg:flex" -->
-      <div class="max-w-3xl mx-auto text-center">
-        <h1
-          class="font-serif text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 py-2"
-        >
-          {title}
-        </h1>
-        <p class="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
-          {description}
-        </p>
-      </div>
-    </div>
-  </section>
+  <Hero title={title} subtitle={description} />
   <article class="my-4 mx-auto prose lg:prose-lg p-4 prose-headings:font-serif">
     <Content />
     <div class="text-gray-500 text-sm">

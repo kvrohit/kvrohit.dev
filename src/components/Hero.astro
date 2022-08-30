@@ -1,0 +1,41 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  animate?: boolean;
+}
+
+const { title, subtitle, animate = false } = Astro.props as Props;
+const animateClass = animate
+  ? "bg-[length:400%_400%] animate-[gradient_15s_ease_infinite]"
+  : "";
+---
+
+<section class="text-white bg-gray-900">
+  <div class="max-w-screen-xl px-4 py-32 mx-auto">
+    <!-- lg:h-screen lg:items-center lg:flex" -->
+    <div class="max-w-3xl mx-auto text-center">
+      <h1
+        class={`py-2 font-serif ${animateClass} text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500`}
+      >
+        {title}
+      </h1>
+      <p class="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+        {subtitle}
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

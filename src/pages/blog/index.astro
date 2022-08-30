@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
 
 let posts = await Astro.glob("../../posts/*.md");
 posts = posts.sort(
@@ -10,18 +11,7 @@ posts = posts.sort(
 ---
 
 <Layout title="Blog - kvrohit.dev">
-  <section class="text-white bg-gray-900">
-    <div class="max-w-screen-xl px-4 py-32 mx-auto">
-      <!-- lg:h-screen lg:items-center lg:flex" -->
-      <div class="max-w-3xl mx-auto text-center">
-        <h1
-          class="font-serif text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 py-2"
-        >
-          Blog posts
-        </h1>
-      </div>
-    </div>
-  </section>
+  <Hero title="Blog posts" />
   <main
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
@@ -32,10 +22,10 @@ posts = posts.sort(
           return (
             <div class="grid py-8 sm:grid-cols-4">
               <div class="mb-4 sm:mb-0">
-                <div class="space-y-1 text-xs font-semibold tracking-wide uppercase">
+                <div class="space-y-1 text-xs font-semibold uppercase tracking-wide">
                   <a
                     href="/"
-                    class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                    class="text-deep-purple-accent-400 hover:text-deep-purple-800 transition-colors duration-200"
                     aria-label="Category"
                   >
                     {post.frontmatter.category}
@@ -54,7 +44,7 @@ posts = posts.sort(
                   <a
                     href={href}
                     aria-label="Article"
-                    class="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
+                    class="hover:text-deep-purple-accent-700 inline-block text-black transition-colors duration-200"
                   >
                     <p class="font-serif text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
                       {post.frontmatter.title}

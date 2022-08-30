@@ -6,13 +6,15 @@ specifiers:
   astro: ^1.0.6
   prettier: ^2.7.1
   prettier-plugin-astro: ^0.5.0
+  prettier-plugin-tailwindcss: ^0.1.13
 
 devDependencies:
   "@astrojs/tailwind": 1.0.0
   "@tailwindcss/typography": 0.5.4
   astro: 1.0.6
   prettier: 2.7.1
-  prettier-plugin-astro: 0.5.0
+  prettier-plugin-astro: 0.5.3
+  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
 
 packages:
   /@ampproject/remapping/2.2.0:
@@ -24,13 +26,6 @@ packages:
     dependencies:
       "@jridgewell/gen-mapping": 0.1.1
       "@jridgewell/trace-mapping": 0.3.15
-    dev: true
-
-  /@astrojs/compiler/0.19.0:
-    resolution:
-      {
-        integrity: sha512-8nvyxZTfCXLyRmYfTttpJT6EPhfBRg0/q4J/Jj3/pNPLzp+vs05ZdktsY6QxAREaOMAnNEtSqcrB4S5DsXOfRg==,
-      }
     dev: true
 
   /@astrojs/compiler/0.23.3:
@@ -593,10 +588,10 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@pkgr/utils/2.3.0:
+  /@pkgr/utils/2.3.1:
     resolution:
       {
-        integrity: sha512-7dIJ9CRVzBnqyEl7diUHPUFJf/oty2SeoVzcMocc5PeOUDK9KGzvgIBjGRRzzlRDaOjh3ADwH0WeibQvi3ls2Q==,
+        integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==,
       }
     engines: { node: ^12.20.0 || ^14.18.0 || >=16.0.0 }
     dependencies:
@@ -3667,17 +3662,29 @@ packages:
       which-pm: 2.0.0
     dev: true
 
-  /prettier-plugin-astro/0.5.0:
+  /prettier-plugin-astro/0.5.3:
     resolution:
       {
-        integrity: sha512-wBDZs0hlPWQDc7P7VmGe8pImci6F434Wd/otfLJwvCSXRb9J7AhmAigXhm5WPgCJuBA509Ovo/Ed+LAgZy4KWg==,
+        integrity: sha512-g4uJ/7k1rJeIWBifeBgTqzgV5gmMTG+lOmOvUZvtIh1R91aqa+yYMzbysIlsJKRaRyWefejrOpvpIuEePBDAyw==,
       }
     engines: { node: ^14.15.0 || >=16.0.0, npm: ">=6.14.0" }
     dependencies:
-      "@astrojs/compiler": 0.19.0
+      "@astrojs/compiler": 0.23.3
       prettier: 2.7.1
       sass-formatter: 0.7.5
       synckit: 0.7.3
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
+    resolution:
+      {
+        integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==,
+      }
+    engines: { node: ">=12.17.0" }
+    peerDependencies:
+      prettier: ">=2.2.0"
+    dependencies:
+      prettier: 2.7.1
     dev: true
 
   /prettier/2.7.1:
@@ -4304,7 +4311,7 @@ packages:
       }
     engines: { node: ^12.20.0 || ^14.18.0 || >=16.0.0 }
     dependencies:
-      "@pkgr/utils": 2.3.0
+      "@pkgr/utils": 2.3.1
       tslib: 2.4.0
     dev: true
 
