@@ -1,0 +1,87 @@
+---
+import ColorBox from "../components/ColorBox.jsx";
+import Palette from "../components/Palette.jsx";
+
+const normalColors = [
+  "#27272a",
+  "#f5a191",
+  "#90b99f",
+  "#e6b99d",
+  "#aca1cf",
+  "#e29eca",
+  "#ea83a5",
+  "#c1c0d4",
+];
+const brightColors = [
+  "#353539",
+  "#ffae9f",
+  "#9dc6ac",
+  "#f0c5a9",
+  "#b9aeda",
+  "#ecaad6",
+  "#f591b2",
+  "#cac9dd",
+];
+const grays = [
+  "#131314",
+  "#1b1b1d",
+  "#2a2a2d",
+  "#3e3e43",
+  "#57575f",
+  "#757581",
+  "#9998a8",
+  "#c1c0d4",
+];
+const bgAndFg = [
+  "#161617",
+  "#161617",
+  "#161617",
+  "#161617",
+  "#c9c7cd",
+  "#c9c7cd",
+  "#c9c7cd",
+  "#c9c7cd",
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mellow - Theme showcase</title>
+  </head>
+  <body class="text-[#c9c7cd] bg-[#161617]">
+    <header
+      class="container p-8 mx-auto bg-[#27272a]"
+      style={{
+        "clip-path": "polygon(0 0, 100% 0, 100% 90%, 0 100%)",
+      }}
+    >
+      <h1 class="text-3xl font-bold">Mellow</h1>
+      <section class="hero my-24">
+        <h2 class="text-4xl font-bold mb-8">A soothing, dark color palette.</h2>
+        <p class="text-xl">
+          Created to be easy on the eyes with a focus on code readability.
+        </p>
+      </section>
+    </header>
+
+    <div class="p-12 container mx-auto bg-[#161617] text-center">
+      <Palette title="Normal">
+        {normalColors.map((color) => <ColorBox client:load bg={color} />)}
+      </Palette>
+      <Palette title="Brights">
+        {brightColors.map((color) => <ColorBox client:load bg={color} />)}
+      </Palette>
+      <Palette title="Grays">
+        {grays.map((color) => <ColorBox client:load bg={color} />)}
+      </Palette>
+      <Palette>
+        {bgAndFg.map((color) => <ColorBox client:load bg={color} />)}
+      </Palette>
+    </div>
+  </body>
+</html>
