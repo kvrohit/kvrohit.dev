@@ -4,8 +4,12 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ["charter", "serif"],
+      mono: ["monospace"],
     },
-    extend: {},
+    extend: {colors: {
+      darkVoid: "#161617",
+      white: "#c9c7cd"
+    }},
   },
   plugins: [require("@tailwindcss/typography")],
 };
