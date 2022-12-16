@@ -15,30 +15,12 @@ export default function ColorBox({ bg }) {
   };
 
   return (
-    <div class="relative flex flex-col">
-      <div
-        class="absolute flex h-full w-full items-center justify-center opacity-80 transition-transform"
-        style={{
-          transform: `scale(${scale()})`,
-        }}
-      >
-        <span class="inline-block rounded-lg bg-black p-2 text-sm text-white">
-          Copied!
-        </span>
+    <div class="flex border-2 rounded" style={{ "border-color": bg }}>
+      <div class="h-10 min-w-[40px]" style={{ "background-color": bg, color: bg }}>
       </div>
-      <div
-        onclick={copyToClipboard}
-        class="h-24 w-24 cursor-pointer"
-        style={{ "background-color": bg, color: bg }}
-      >
-        {bg}
-      </div>
-      <div
-        class="py-2 text-center text-sm uppercase"
-        style={{ color: "#c9c7cd", "background-color": "#27272a" }}
-      >
-        {bg}
+      <div class="h-10 w-full flex items-center justify-center">
+        <div class="font-mono text-[1.2em]">{bg}</div>
       </div>
     </div>
-  );
+  )
 }
