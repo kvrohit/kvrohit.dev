@@ -5,7 +5,13 @@ import Hero from "../components/Hero.astro";
 
 const repos = await fetch("https://api.github.com/users/kvrohit/repos");
 const allRepos = await repos.json();
-const featuredRepos = ["substrata.nvim", "rasmus.nvim", "mellow.nvim", "tasks.nvim", "fortune"];
+const featuredRepos = [
+  "substrata.nvim",
+  "rasmus.nvim",
+  "mellow.nvim",
+  "tasks.nvim",
+  "fortune",
+];
 
 export interface Repo {
   name: string;
