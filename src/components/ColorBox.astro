@@ -1,0 +1,11 @@
+---
+const { bg } = Astro.props;
+---
+
+<div class="flex border-2 rounded" style={{ "border-color": bg }}>
+  <div class="h-10 min-w-[40px]" style={{ "background-color": bg, color: bg }}>
+  </div>
+  <div class="h-10 w-full flex items-center justify-center">
+    <div class="font-mono text-[1.2em]">{bg}</div>
+  </div>
+</div>

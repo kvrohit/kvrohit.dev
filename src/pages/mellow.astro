@@ -1,10 +1,37 @@
 ---
-import ColorBox from "../components/ColorBox.jsx";
-import Palette from "../components/Palette.jsx";
+import ColorBox from "../components/ColorBox.astro";
+import Palette from "../components/Palette.astro";
 
-const normalColors = ["#27272a", "#f5a191", "#90b99f", "#e6b99d", "#aca1cf", "#e29eca", "#ea83a5", "#c1c0d4"];
-const brightColors = ["#353539", "#ffae9f", "#9dc6ac", "#f0c5a9", "#b9aeda", "#ecaad6", "#f591b2", "#cac9dd"];
-const grays = ["#131314", "#1b1b1d", "#2a2a2d", "#3e3e43", "#57575f", "#757581", "#9998a8", "#c1c0d4"];
+const normalColors = [
+  "#27272a",
+  "#f5a191",
+  "#90b99f",
+  "#e6b99d",
+  "#aca1cf",
+  "#e29eca",
+  "#ea83a5",
+  "#c1c0d4",
+];
+const brightColors = [
+  "#353539",
+  "#ffae9f",
+  "#9dc6ac",
+  "#f0c5a9",
+  "#b9aeda",
+  "#ecaad6",
+  "#f591b2",
+  "#cac9dd",
+];
+const grays = [
+  "#131314",
+  "#1b1b1d",
+  "#2a2a2d",
+  "#3e3e43",
+  "#57575f",
+  "#757581",
+  "#9998a8",
+  "#c1c0d4",
+];
 const bgAndFg = ["#161617", "#c9c7cd"];
 ---
 
@@ -21,8 +48,12 @@ const bgAndFg = ["#161617", "#c9c7cd"];
     <header class="p-6 bg-[#27272a]">
       <h1 class="text-3xl font-bold">Mellow</h1>
       <section class="hero text-center my-24">
-        <h2 class="text-4xl font-bold mb-8 font-serif">A soothing, dark color palette.</h2>
-        <p class="text-xl mb-10">Created to be easy on the eyes with a focus on code readability.</p>
+        <h2 class="text-4xl font-bold mb-8 font-serif">
+          A soothing, dark color palette.
+        </h2>
+        <p class="text-xl mb-10">
+          Created to be easy on the eyes with a focus on code readability.
+        </p>
         <a
           class="py-2 px-4 border rounded bg-[#c1c0d4] text-[#161617] hover:bg-[#27272a] hover:text-[#c9c7cd] active:bg-[#c9c7cd] active:text-[#161617]"
           href="https://github.com/kvrohit/mellow.nvim">GitHub</a
