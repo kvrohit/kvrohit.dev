@@ -2,10 +2,11 @@
   <div class="flex">
     <a
       id="logo"
-      class="monoton-regular p-2 flex block hover:bg-stone-800 hover:text-white justify-center items-center w-24 border-r border-gray-800 font-100 text-5xl tracking-narrow"
+      class="monoton-regular p-2 flex block justify-center items-center w-24 border-r border-gray-800 font-100 text-5xl tracking-narrow"
       href="/"
     >
-      R
+      <span>R</span>
+      <span>V</span>
     </a>
 
     <div class="flex-1"></div>
@@ -15,11 +16,12 @@
           <a href="/" class="hover:animate-pulse hover:underline">home</a>
         </li>
         <li>
-            <a href="/blog" class="hover:animate-pulse hover:underline">blog</a>
-          </li>
+          <a href="/blog" class="hover:animate-pulse hover:underline">blog</a>
+        </li>
         <li>
           <a href="/mellow" class="hover:animate-pulse hover:underline"
-            >mellow</a>
+            >mellow</a
+          >
         </li>
       </ul>
     </nav>
@@ -65,5 +67,25 @@
     font-family: "Monoton", serif;
     font-weight: 400;
     font-style: normal;
+  }
+  #logo {
+    display: grid;
+    place-items: center;
+    span {
+      grid-area: 1/1;
+      transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    span:nth-child(2) {
+      transform: translateY(-150%);
+    }
+    overflow: hidden;
+  }
+  #logo:hover {
+    span:nth-child(1) {
+      transform: translateY(150%);
+    }
+    span:nth-child(2) {
+      transform: translateY(0);
+    }
   }
 </style>
